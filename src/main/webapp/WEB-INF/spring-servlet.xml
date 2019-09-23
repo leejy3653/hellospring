@@ -13,8 +13,8 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:annotation-config />
+	<context:annotation-config /> <!-- bin 설정 대신에 annotation @Controller 으로 설정하겠다. -->
 	<context:component-scan
-		base-package="kr.co.itcen.hellospring.controller" />
+		base-package="kr.co.itcen.hellospring.controller" /> <!-- 하위부터 스캐닝(디테일하게 적고 패키징을 잘해야함)-->
 
 </beans>

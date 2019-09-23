@@ -12,18 +12,8 @@
 
 	<servlet-mapping>
 		<servlet-name>spring</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/</url-pattern>	<!-- 모든요청을 다 받는다 -->
 	</servlet-mapping>
-
-
-
-
-
-
-
-
-
-
 
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
