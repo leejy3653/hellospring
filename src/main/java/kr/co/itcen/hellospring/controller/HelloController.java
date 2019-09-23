@@ -1,10 +1,18 @@
 package kr.co.itcen.hellospring.controller;
 
+import java.io.IOException;
+import java.io.Writer;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -52,4 +60,18 @@ public class HelloController {
 		return "/WEB-INF/views/hello.jsp";
 	}
 
+	// 기술 침투-> 이걸로 하면 강사님한테 뒤짐(비추천)
+	@RequestMapping("/hello6")
+	public void hello6(HttpServletRequest request, HttpServletResponse response, Writer out, Model model)
+			throws ServletException, IOException {
+		// request.getRequestDispatcher("/WEB-INF/views/hello.jsp").forward(request,
+		// response);
+		out.write("<h1>Hello World</h1>");
+	}
+
+	@ResponseBody
+	@RequestMapping("/hello7")
+	public String hello7() {
+		return "<h1>Hello World</h1>";
+	}
 }
