@@ -8,6 +8,8 @@
 </head>
 <body>
 	<h1>Hello Spring</h1>
-
+	data:--${data }--<br>	<!-- --Hello World-- -->
+	email:--${email }--<br>
+	age:--${age }--<br>
 </body>
 </html>

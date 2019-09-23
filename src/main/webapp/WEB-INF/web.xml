@@ -11,7 +11,7 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>spring</servlet-name>
+		<servlet-name>spring</servlet-name><!-- spring-servlet.xml -->
 		<url-pattern>/</url-pattern>	<!-- 모든요청을 다 받는다 -->
 	</servlet-mapping>
 
